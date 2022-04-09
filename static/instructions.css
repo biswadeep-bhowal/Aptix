@@ -1,0 +1,17 @@
+.ins h2{
+    text-align: center;
+}
+.lines{
+    border-radius: 5px;
+  
+  padding: 20px;
+    background-color:  #c2bfbf;;
+}
+.button {
+    background-color: #35879e;
+    padding: 5px 20px;
+    cursor: pointer;
+    text-align: center;
+  text-decoration: none;
+  color: white;
+}

@@ -1,0 +1,120 @@
+{% extends 'common.html' %}
+
+{% load static %}
+
+
+
+{% block title %}   Register    {% endblock %}
+
+
+
+{% block stylesheet %}
+
+    <link rel="stylesheet" href="{% static 'login.css'%}">
+
+{% endblock %}
+
+
+
+{% block body %}
+
+    <br><br>
+
+    <div class="d-flex justify-content-center my-100">    
+    
+        <form method = "POST" action = "" class = "form-center bg-dark text-white col-4">
+            {% csrf_token %} 
+    
+            <center><h2 class = "my-3">REGISTER</h2></center>
+    
+            <div class="form-group row my-4" >
+
+                <label class="col-4 col-form-label">First Name</label>
+
+                <div class="col-8">
+                    <input type="text" name="first_name" class="form-control" required placeholder="First Name">
+                </div>
+
+            </div>
+
+            <div class="form-group row my-4" >
+
+                <label class="col-4 col-form-label">Last Name</label>
+
+                <div class="col-8">
+                    <input type="text" name="last_name" class="form-control" required placeholder="Last Name">
+                </div>
+
+            </div>
+
+            <div class="form-group row my-4" >
+
+                <label class="col-4 col-form-label">Mobile</label>
+
+                <div class="col-8">
+                    <input type="text" name="mobile" class="form-control" requried placeholder="Mobile" pattern="[789][0-9]{9}" >
+                </div>
+
+            </div>
+
+            <div class="form-group row my-4">
+            
+                <label class="col-4 col-form-label">Password</label>
+                
+                <div class="col-8">
+                    <input type="password" name="password" class="form-control" placeholder="password">
+                </div>
+
+            </div>
+
+            <div class="form-group row my-4">
+            
+                <label class="col-4 col-form-label">Confirm Password</label>
+                
+                <div class="col-8">
+                    <input type="password" name="confirm_password" class="form-control" placeholder="password">
+                </div>
+
+            </div>
+
+            <div class="form-group row my-4" >
+
+                <label class="col-4 col-form-label">Email</label>
+
+                <div class="col-8">
+                    <input type="text" name="email" class="form-control" placeholder="email-id">
+                </div>
+                
+            </div>
+            
+            <center>
+            
+                <div class="mb-3">
+            
+                    <label for="exampleInputPassword1" class="form-label"><b>Account Type</b></label><br>
+                    
+                    <input type="radio" id="user" name="account" value="S" checked="checked" >
+                    <label for="html"style="padding:10px">Student</label>
+                    
+                    <input type="radio" id="admin" name="account" value="A">
+                    <label for="css">Administrator</label><br>
+
+                </div>
+        
+            </center>
+
+            <center>
+                <input type = "submit" value = "Register" class = "btn btn-outline-secondary text-white my-3 rounded-pill">
+            </center>
+
+    </form>
+    
+    </div>
+
+    {% if Message %}
+
+        <br><br>
+        <center><div class = "alert alert-danger">{{ Message }}</div></center>
+    {% endif %}
+
+{% endblock %}

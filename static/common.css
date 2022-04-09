@@ -1,0 +1,28 @@
+*{
+    font-family:  Mochiy Pop P One;     
+    box-sizing: border-box;   
+    border-radius: 20px;
+         
+}
+html,body
+{
+    height: 100%;
+    width: 100%;
+}
+
+.block-content
+{
+    width: 100%; 
+    margin-top: 50px;
+    margin: 0px;
+}
+.form-control {
+    -webkit-border-radius: 50px;
+    -moz-border-radius: 50px;
+  
+    border-radius: 50px;
+  }
+
+  fieldset {
+    overflow: hidden
+  }

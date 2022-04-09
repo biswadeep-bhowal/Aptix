@@ -1,0 +1,59 @@
+{% extends 'common.html' %}
+
+{% load static %}
+
+{% block title %}  TEST {% endblock %}
+
+{% block stylesheet %}
+
+
+
+{% endblock %}
+
+
+
+{% block body %}
+
+    <center>
+
+        <div class="bg-dark text-white" style="padding:10px; border-radius: 0;">
+            What is your name?<br>
+        </div>
+
+    </center>
+
+    <br>
+
+    <form action="" method="POST">
+        {% csrf_token %}
+
+        <div  style="margin-left: 50px;">
+
+            <input type="radio" id="" name="option" value="A" required>
+            <label for="">ABCD</label>
+            <br><br>
+            
+            <input type="radio" id="" name="option" value="B">
+            <label for="css">ABCD</label>
+            <br><br>
+            
+            <input type="radio" id="" name="option" value="C">
+            <label for="css">ABCD</label>
+            <br><br>
+            
+            <input type="radio" id="" name="option" value="D">
+            <label for="css">ABCD</label>
+            <br><br><br>
+            
+            <input type = "hidden" name = "test_started">
+            
+            <button type="submit" class="btn btn-dark rounded-pill">Submit and Next</button>
+            <button type="submit" class="btn btn-dark rounded-pill">Mark for Review</button>
+
+        </div>
+
+    </form>
+
+    {{ p.score }}
+
+{% endblock %}

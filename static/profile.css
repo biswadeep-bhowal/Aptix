@@ -1,0 +1,67 @@
+a:link, a:visited
+{
+    color : white;
+}
+
+
+.header
+{
+    padding : 20px;
+    border-radius : 0px;
+
+    position : absolute;
+    top : 0px;
+
+    width : 100%;
+}
+
+
+.footer
+{
+    border-radius : 0px;
+    padding : 10px;
+    
+    position : absolute;
+    bottom : 0px;
+
+    width : 100%;
+}
+
+.alert
+{
+    position : absolute;
+    top : 50%;
+    left : 40%;
+}
+
+.profile
+{
+    position : absolute;
+    top : 30%;
+    left : 0%;
+
+    border-radius : 10px;
+    height : auto;
+    width : auto;
+
+    padding : 20px;
+    margin : 20px;
+
+    border : solid 5px black;
+}
+
+
+.test
+{
+    position : absolute;
+
+    top : 40%;
+    right : 20%;
+
+    border-radius: 10px;
+
+    height : auto;
+    width : auto;
+
+    padding : 20px;
+}

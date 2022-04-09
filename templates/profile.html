@@ -1,0 +1,91 @@
+{% extends 'common.html' %}
+
+{% load static %}
+
+{% block title %}  Login {% endblock %}
+
+{% block stylesheet %}  
+
+    <link rel = "stylesheet" href = "{% static 'profile.css' %}"
+
+{% endblock %}
+
+
+
+{% block body %}
+
+    <div class = "header bg-dark text-white">
+        <center><h1>Profile</h1></center>
+    </div>
+
+
+    {% if request.user.is_authenticated %}
+
+        <div class="justify-content-center my-100 profile">
+            
+            <h2>
+            <p>Name : {{ request.user.get_full_name }}</p>
+            <br>
+
+            <p>Email Address : {{ request.user.email }}</p>
+            <br>
+            
+            <p>Mobile Number : 9874683979</p>
+            </h2>
+                
+        </div>
+
+        <div class = "justify-content-center my-100 bg-dark text-white test">
+
+            
+            <form method = "POST" action = "/instructions/">
+                {% csrf_token %}
+
+                <center>
+
+                    <h2>
+                        <label for = "subject">Select A Subject : </label></h2><br>
+                    
+                        <select name = "subject">
+
+                            <option value = "PYTHON">Python</option>
+                            <option value = "JAVA">Java</option>
+                            <option value = "CN">CN</option>
+                            <option value = "DBMS">DBMS</option>
+                            <option value = "OS">OS</option>
+
+                        </select>
+                    </h2>
+                    
+                    <br><br>
+
+                    <button type="submit" class="btn btn-success rounded-pill">Take Test</button>
+            
+                </center>
+            
+            </form>
+
+        </div>
+
+        
+
+    </div>
+
+    {% else %}
+
+        <center>
+            <div class = "alert alert-danger">Login To See Profile Details!</div>
+        </center>
+
+    {% endif %}
+    
+    <center>
+
+        <div class = "footer bg-dark text-white">
+            <p>© 2022 - 2023 Developer | TCS | All Rights Reserved.</p>
+            <p><a href="https://www.tcs.com/">Powered By TCS</a></p>
+        </div>
+        
+    </center>
+
+{% endblock %}

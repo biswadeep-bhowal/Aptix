@@ -1,0 +1,47 @@
+{% extends 'common.html' %}
+
+{% load static %}
+
+{% block title %}  Instructions {% endblock %}
+
+{% block stylesheet %}
+    
+    <link rel="stylesheet" href="{% static 'instructions.css'%}">
+
+{% endblock %}
+
+{% block body %}
+    
+    <div class="ins lines h100"><h2>Please read the following instructions carefully</h2>
+        <br><br>
+
+        <div class="lines">
+
+            <form method = "POST">
+                {% csrf_token %}
+                
+                <p>1. The exam has fixed amount of time and you have to complete the exam within that time period</p>        
+                <p>2. It is a adaptive test which gets harder and easier based on the answer given to pervious question</p>
+                <p>3. After clicking the Start Test button the screen will be locked</p>
+                <p>4. Any type of malpractice is strictly prohibited</p>                
+                <h3>Exam pattern</h3>
+                
+                <p>Exam topic: <b> {{ subject }} </b></p>
+                <p>Number of question: 10</p>
+                <p>Time allowed: 20min</p>
+                
+                <input type="checkbox" id="ins" name="start_test" value="ins" required>
+                <label for="vehicle1"> I have read and understood the instructions</label><br>        
+                
+                <button id= "demo" type="submit" class="btn btn-dark ">Start Test</button>              
+            
+            </form>
+
+        </div>
+
+    </div>
+    <div class="lines" style=" height: 9.5%;">
+        <br>
+    </div>
+
+{% endblock %}
