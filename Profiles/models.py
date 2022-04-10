@@ -20,4 +20,4 @@ class Student( models.Model ) :
     user = models.OneToOneField( User, on_delete = models.PROTECT )
     mobile = models.CharField( verbose_name = 'Mobile Number', max_length = 10, default = '0000000000' )
 
-    def __str__( self ) : return self.user.email
+    def __str__( self ) : return self.user

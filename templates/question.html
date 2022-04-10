@@ -17,7 +17,7 @@
     <center>
 
         <div class="bg-dark text-white" style="padding:10px; border-radius: 0;">
-            What is your name?<br>
+            {{ C.qno }}. {{ C.question }}<br>
         </div>
 
     </center>
@@ -30,19 +30,19 @@
         <div  style="margin-left: 50px;">
 
             <input type="radio" id="" name="option" value="A" required>
-            <label for="">ABCD</label>
+            <label for="">{{ C.A }}</label>
             <br><br>
             
             <input type="radio" id="" name="option" value="B">
-            <label for="css">ABCD</label>
+            <label for="css">{{ C.B }}</label>
             <br><br>
             
             <input type="radio" id="" name="option" value="C">
-            <label for="css">ABCD</label>
+            <label for="css">{{ C.C }}</label>
             <br><br>
             
             <input type="radio" id="" name="option" value="D">
-            <label for="css">ABCD</label>
+            <label for="css">{{ C.D }}</label>
             <br><br><br>
             
             <input type = "hidden" name = "test_started">
@@ -54,6 +54,8 @@
 
     </form>
 
-    {{ p.score }}
+    <div>Difficulty : {{ C.difficulty }}</div>
+    <br>
+    <div>Score : {{ C.Score }}</div>
 
 {% endblock %}

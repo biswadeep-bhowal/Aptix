@@ -36,8 +36,8 @@ a:link, a:visited
 
 .profile
 {
-    position : absolute;
-    top : 30%;
+    position: absolute;
+    top : 25%;
     left : 0%;
 
     border-radius : 10px;
@@ -53,15 +53,15 @@ a:link, a:visited
 
 .test
 {
-    position : absolute;
+    position : relative;
 
-    top : 40%;
-    right : 20%;
+    top : 30%;
+    left : 70%;
 
     border-radius: 10px;
 
     height : auto;
-    width : auto;
+    width : 400px;
 
     padding : 20px;
 }

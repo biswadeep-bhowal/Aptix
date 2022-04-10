@@ -18,7 +18,7 @@
 
 {% block body %}
 
-    <br><br>
+ 
 
     <div class="d-flex justify-content-center my-100">    
     
@@ -88,23 +88,19 @@
             </div>
             
             <center>
-            
                 <div class="mb-3">
-            
-                    <label for="exampleInputPassword1" class="form-label"><b>Account Type</b></label><br>
-                    
+                    <label for="exampleInputPassword1" class="form-label"><b>Account Type</b></label><br>                    
                     <input type="radio" id="user" name="account" value="S" checked="checked" >
-                    <label for="html"style="padding:10px">Student</label>
-                    
+                    <label for="html"style="padding:5px">Student</label>
                     <input type="radio" id="admin" name="account" value="A">
-                    <label for="css">Administrator</label><br>
-
-                </div>
-        
+                    <label for="css">Administrator</label>
+                </div>       
             </center>
-
             <center>
                 <input type = "submit" value = "Register" class = "btn btn-outline-secondary text-white my-3 rounded-pill">
+            </center>
+            <center>
+                <a href="http://localhost:8000">Account already exists?</a>	
             </center>
 
     </form>
