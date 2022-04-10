@@ -107,7 +107,7 @@ class Result( models.Model ) :
 
     responses = models.CharField( verbose_name = 'Responses', max_length = 256, default = '' )
 
-    def __str__( self ) : return str( self.student.get_user.email ) + ' ' + str( self.date )
+    #def __str__( self ) : return str( self.student.get_user.email ) + ' ' + str( self.date )
 
 
 
@@ -143,4 +143,4 @@ class Cache( models.Model ) :
     correct = models.CharField( choices = [ ( 'A', 'A' ), ( 'B', 'B' ), ( 'C', 'C' ), ( 'D', 'D' ) ], max_length = 1, default = 'A' )
     difficulty = models.PositiveIntegerField(  choices = [ ( 1, 'EASY' ), ( 2, 'MEDIUM' ), ( 3, 'HARD' ) ], default = 1 )
 
-    def __str__( self ) : return str( self.student.user.get_email() )
+    #def __str__( self ) : return str( self.student.user.get_email() )
